@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "rounding-feature"
+client_id = "c38d071100ba5d87f8294fcf664294bc"
+application_url = "https://issue-annie-sip-whether.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://issue-annie-sip-whether.trycloudflare.com/auth/callback",
+  "https://issue-annie-sip-whether.trycloudflare.com/auth/shopify/callback",
+  "https://issue-annie-sip-whether.trycloudflare.com/api/auth/callback",
+  "https://issue-annie-sip-whether.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "optimydemo.myshopify.com"

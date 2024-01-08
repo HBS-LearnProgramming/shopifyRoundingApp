@@ -1,0 +1,32 @@
+# inputVariables.graphql
+mutation AppSubscriptionCreate($name: String!, $lineItems: [AppSubscriptionLineItemInput!]!, $returnUrl: URL!, $trialDays: Int!) {
+  appSubscriptionCreate(name: $name, returnUrl: $returnUrl, lineItems: $lineItems, trialDays: $trialDays) {
+    userErrors {
+      field
+      message
+    }
+    appSubscription {
+      id
+    }
+    confirmationUrl
+  }
+}
+
+# input variables
+# {
+#   "name": "Super Duper Recurring Plan with a Trial",
+#   "returnUrl": "http://super-duper.shopifyapps.com/",
+#   "trialDays": 7,
+#   "lineItems": [
+#     {
+#       "plan": {
+#         "appRecurringPricingDetails": {
+#           "price": {
+#             "amount": 10,
+#             "currencyCode": "USD"
+#           }
+#         }
+#       }
+#     }
+#   ]
+# }
